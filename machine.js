@@ -6,14 +6,15 @@
 //     console.log('sohan');
 // })
 const allcvs = document.getElementById('all-cv');
+// let currentlist = 'all'
 
 
-function deletes(id){
-    const deletparmanet = document.getElementById('btn8')
-    const deletparmanets = document.getElementById('btn9')
-    deletparmanet.parentElement.remove(id)
-    // deletparmanets.parentElement.remove(id)
-}
+// function deletes(id){
+//     const deletparmanet = document.getElementById('btn8')
+//     const deletparmanets = document.getElementById('btn9')
+//     deletparmanet.parentElement.remove(id)
+//     // deletparmanets.parentElement.remove(id)
+// }
 
 
 
@@ -22,6 +23,7 @@ function deletes(id){
 
 
 function toggle(id){
+    currentlist = id
     const all = document.getElementById('all-jobs-btn')
     const interview = document.getElementById('all-interview-btn')
     const rejected = document.getElementById('all-reject-btn')
@@ -30,14 +32,15 @@ function toggle(id){
     interview.classList.add('bg-[#94B4C1]')
     rejected.classList.add('bg-[#94B4C1]')
 
-    const currentlists = id
 
     const selected = document.getElementById(id)
     selected.classList.remove('bg-[#94B4C1]')
+    // currentlist = id
 
     if(id == 'all-interview-btn'){
         allcvs.classList.add('hidden')
         interviewSection.classList.remove('hidden')
+        rejectedsection.classList.add("hidden");
         interviewfun()
     }
     else if (id == 'all-jobs-btn'){
