@@ -30,10 +30,13 @@
             </div>
         </div>
         <div class="flex items-center justify-between my-4">
-            <h1 class="text-3xl">All jobs </h1>
-            <p id="all-job-count" class="all-job-count text-3xl">0</p>
-            <p id="all-interview-count" class="all-job-count text-3xl hidden">0</p>
-            <p id="all-reject-count" class="all-job-count text-3xl hidden">0</p>
+            <h1 class="text-3xl">Available Jobs</h1>
+            <!-- <div class="flex mx-2"> -->
+                <p id="all-job-counts" class="all-job-count text-3xl"> <span id="all-job-count">0</span> jobs</p>
+                <p id="all-interview-counts" class="all-job-count text-3xl hidden"><span id="all-interview-count">0</span> of all jobs</p>
+                <p id="all-reject-counts" class="all-job-count text-3xl hidden"><span id="all-reject-count">0</span> of all jobs</p>
+                <!-- <p id="all-count" class="text-3xl hidden"></p> -->
+            <!-- </div> -->
         </div>
 
         <hr>
@@ -53,14 +56,11 @@
 
         <!-- <section id="card-section" class="w-[80%] mx-auto"> -->
         <!-- filtered card  -->
-        <div class="filter-interview-section hidden">
-                   
-                </div>
-            </div>
-            
+        <div id="filter-interview-section" class="filter-interview-section hidden">
+
         </div>
 
-        <div class="filter-reject-section hidden">
+        <div id="filter-reject-section" class="filter-reject-section hidden">
         </div>
 
         <div id="all-cv" class=" space-y-7">
@@ -83,13 +83,14 @@
                     <button class="cursor-pointer fa-lg delets"><i class="fa-solid fa-trash-can delets"></i></button>
                 </div>
             </div>
-            <div id="card3" class=" card bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl ">
+            <div class=" card bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl ">
                 <div class="letf-card space-y-2">
                     <h2 class="mobile text-2xl"> WebFlow Agency</h2>
                     <p class="devolaper">Web Designer & Developerr</p>
                     <p class="job-time-salary">Los Angeles, CA •Part-time • 80,000 - $120,000</p>
                     <p id="not-applied" class="bg-[#A7E6FF] inline-block p-2 not-applied">Not Applied</p>
-                    <p class="description">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                    <p class="description">Create stunning web experiences for high-profile clients. Must have portfolio
+                        and experience with modern web design trends.</p>
                     <div class="gap-5">
                         <button class="interview-btn bg-[#6295A2] p-2 rounded-md cursor-pointer "
                             id="interview-btn">interview</button>
@@ -98,16 +99,18 @@
                     </div>
                 </div>
                 <div class="right-card bg-[#F1FCFC] rounded-full h-[35px] w-[35px] flex items-center justify-center ">
-                    <button class="cursor-pointer fa-lg " id="delet"><i class="fa-solid fa-trash-can delets"></i></button>
+                    <button class="cursor-pointer fa-lg " id="delet"><i
+                            class="fa-solid fa-trash-can delets"></i></button>
                 </div>
             </div>
-            <div id="card2" class=" card bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl ">
+            <div class=" card bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl ">
                 <div class="letf-card space-y-2">
                     <h2 class="mobile text-2xl">DataViz Solutions</h2>
                     <p class="devolaper">Data Visualization pecialist</p>
                     <p class="job-time-salary">Boston, MA • Full-time • $125,000 - $165,000</p>
                     <p id="not-applied" class="bg-[#A7E6FF] inline-block p-2 not-applied">Not Applied</p>
-                    <p class="description">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                    <p class="description">Transform complex data into compelling visualizations. Required skills:
+                        D3.js, React, and strong analytical thinking.</p>
                     <div class="gap-5">
                         <button class="interview-btn bg-[#6295A2] p-2 rounded-md cursor-pointer "
                             id="interview-btn">interview</button>
@@ -116,16 +119,18 @@
                     </div>
                 </div>
                 <div class="right-card bg-[#F1FCFC] rounded-full h-[35px] w-[35px] flex items-center justify-center ">
-                    <button class="cursor-pointer fa-lg " id="delet"><i class="fa-solid fa-trash-can delets"></i></button>
+                    <button class="cursor-pointer fa-lg " id="delet"><i
+                            class="fa-solid fa-trash-can delets"></i></button>
                 </div>
             </div>
-            <div id="card2" class=" card bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl ">
+            <div class=" card bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl ">
                 <div class="letf-card space-y-2">
                     <h2 class="mobile text-2xl">CloudFirst Inc</h2>
                     <p class="devolaper">Backend Developer</p>
                     <p class="job-time-salary">Seattle, WA• Full-time • $140,000 - $190,000</p>
                     <p id="not-applied" class="bg-[#A7E6FF] inline-block p-2 not-applied">Not Applied</p>
-                    <p class="description">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                    <p class="description">Design and maintain scalable backend systems using Python and AWS. Work with
+                        modern DevOps practices and cloud infrastructure.</p>
                     <div class="gap-5">
                         <button class="interview-btn bg-[#6295A2] p-2 rounded-md cursor-pointer "
                             id="interview-btn">interview</button>
@@ -134,16 +139,18 @@
                     </div>
                 </div>
                 <div class="right-card bg-[#F1FCFC] rounded-full h-[35px] w-[35px] flex items-center justify-center ">
-                    <button class="cursor-pointer fa-lg " id="delet"><i class="fa-solid fa-trash-can delets"></i></button>
+                    <button class="cursor-pointer fa-lg " id="delet"><i
+                            class="fa-solid fa-trash-can delets"></i></button>
                 </div>
             </div>
-            <div id="card2" class=" card bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl ">
+            <div class=" card bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl ">
                 <div class="letf-card space-y-2">
                     <h2 class="mobile text-2xl">Innovation Labs</h2>
                     <p class="devolaper">UI/UX Engineer</p>
                     <p class="job-time-salary">Austin, TX • Full-time • $110,000 - $150,000</p>
                     <p id="not-applied" class="bg-[#A7E6FF] inline-block p-2 not-applied">Not Applied</p>
-                    <p class="description">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                    <p class="description">Create beautiful and functional user interfaces for our suite of products.
+                        Strong design skills and frontend development expertise required.</p>
                     <div class="gap-5">
                         <button class="interview-btn bg-[#6295A2] p-2 rounded-md cursor-pointer "
                             id="interview-btn">interview</button>
@@ -152,16 +159,18 @@
                     </div>
                 </div>
                 <div class="right-card bg-[#F1FCFC] rounded-full h-[35px] w-[35px] flex items-center justify-center ">
-                    <button class="cursor-pointer fa-lg " id="delet"><i class="fa-solid fa-trash-can delets"></i></button>
+                    <button class="cursor-pointer fa-lg " id="delet"><i
+                            class="fa-solid fa-trash-can delets"></i></button>
                 </div>
             </div>
-            <div id="card2" class=" card bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl ">
+            <div class=" card bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl ">
                 <div class="letf-card space-y-2">
                     <h2 class="mobile text-2xl">MegaCorp Solutions</h2>
                     <p class="devolaper">JavaScript Developer</p>
                     <p class="job-time-salary">New York, NY • Full-time • $130,000 - $170,00</p>
                     <p id="not-applied" class="bg-[#A7E6FF] inline-block p-2 not-applied">Not Applied</p>
-                    <p class="description">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                    <p class="description">Build enterprise applications with JavaScript and modern frameworks. We offer
+                        competitive compensation, health insurance, and professional development opportunities.</p>
                     <div class="gap-5">
                         <button class="interview-btn bg-[#6295A2] p-2 rounded-md cursor-pointer "
                             id="interview-btn">interview</button>
@@ -170,16 +179,18 @@
                     </div>
                 </div>
                 <div class="right-card bg-[#F1FCFC] rounded-full h-[35px] w-[35px] flex items-center justify-center ">
-                    <button class="cursor-pointer fa-lg " id="delet"><i class="fa-solid fa-trash-can delets"></i></button>
+                    <button class="cursor-pointer fa-lg " id="delet"><i
+                            class="fa-solid fa-trash-can delets"></i></button>
                 </div>
             </div>
-            <div id="card2" class=" card bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl ">
+            <div class=" card bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl ">
                 <div class="letf-card space-y-2">
                     <h2 class="mobile text-2xl">StartupXYZ</h2>
                     <p class="devolaper">Full Stack Engineer</p>
                     <p class="job-time-salary">Remote • Full-time • $120,000 - $160,000</p>
                     <p id="not-applied" class="bg-[#A7E6FF] inline-block p-2 not-applied">Not Applied</p>
-                    <p class="description">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                    <p class="description">Join our fast-growing startup and work on our core platform. Experience with
+                        Node.js and React required. Great benefits and equity package included.</p>
                     <div class="gap-5">
                         <button class="interview-btn bg-[#6295A2] p-2 rounded-md cursor-pointer "
                             id="interview-btn">interview</button>
@@ -188,16 +199,19 @@
                     </div>
                 </div>
                 <div class="right-card bg-[#F1FCFC] rounded-full h-[35px] w-[35px] flex items-center justify-center ">
-                    <button class="cursor-pointer fa-lg " id="delet"><i class="fa-solid fa-trash-can delets"></i></button>
+                    <button class="cursor-pointer fa-lg " id="delet"><i
+                            class="fa-solid fa-trash-can delets"></i></button>
                 </div>
             </div>
-            <div id="card2" class=" card bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl ">
+            <div class=" card bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl ">
                 <div class="letf-card space-y-2">
                     <h2 class="mobile text-2xl">TechCorp Industries</h2>
                     <p class="devolaper">Senior Frontend Developer</p>
                     <p class="job-time-salary">San Francisco, CA • Full-time • $130,000 - $175,000</p>
                     <p id="not-applied" class="bg-[#A7E6FF] inline-block p-2 not-applied">Not Applied</p>
-                    <p class="description">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                    <p class="description">We are looking for an experienced Frontend Developer to build scalable web
+                        applications using React and TypeScript. You will work with a talented team on cutting-edge
+                        projects.</p>
                     <div class="gap-5">
                         <button class="interview-btn bg-[#6295A2] p-2 rounded-md cursor-pointer "
                             id="interview-btn">interview</button>
@@ -206,7 +220,8 @@
                     </div>
                 </div>
                 <div class="right-card bg-[#F1FCFC] rounded-full h-[35px] w-[35px] flex items-center justify-center ">
-                    <button class="cursor-pointer fa-lg " id="delet"><i class="fa-solid fa-trash-can delets"></i></button>
+                    <button class="cursor-pointer fa-lg " id="delet"><i
+                            class="fa-solid fa-trash-can delets"></i></button>
                 </div>
             </div>
         </div>

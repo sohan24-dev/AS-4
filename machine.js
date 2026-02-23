@@ -1,25 +1,64 @@
+function deletsss() {
 
-// const delet = document.querySelector()
+    const container = document.querySelector('main')
+    container.addEventListener('click', function (event) {
+        // console.log(event.target.classList.contains('delets'));
+        if (event.target.classList.contains('delets')) {
+            const parentdelet = event.target.parentNode.parentNode.parentNode
+            // console.log(parentdelet);
+            const del = document.getElementById('all-job-count')
+            // const interviwss= document.getElementById('all-interview-count')
+            del.innerText = Number(del.innerText) - 1
+            let totals = document.getElementById('total');
+            totals.innerText = del.innerText
+            parentdelet.remove()
+        }
+        else if (event.target.classList.contains('deletss')){
+            const parentdelets = event.target.parentNode.parentNode.parentNode
+            const indel = document.getElementById('all-interview-count')
+            indel.innerText = Number(indel.innerText) - 1
+            const interviews = document.getElementById('interview');
+            interviews.innerText = indel.innerText
 
-// let currentlist = 'all'
+            const del = document.getElementById('all-job-count')
+            // const interviwss= document.getElementById('all-interview-count')
+            del.innerText = Number(del.innerText) - 1
+            let totals = document.getElementById('total');
+            totals.innerText = del.innerText
+            // parentdelet.remove()
+
+            parentdelets.remove()
+        }
+        else if (event.target.classList.contains('rejectdel')){
+            const rejectdelets = event.target.parentNode.parentNode.parentNode
+            const reject = document.getElementById('all-reject-count')
+            reject.innerText = Number(reject.innerText) - 1
+            const rejectss = document.getElementById('rejected');
+            rejectss.innerText = reject.innerText
+
+            const del = document.getElementById('all-job-count')
+            // const interviwss= document.getElementById('all-interview-count')
+            del.innerText = Number(del.innerText) - 1
+            let totals = document.getElementById('total');
+            totals.innerText = del.innerText
+
+            rejectdelets.remove()
+        }
 
 
-// function deletes(id){
-//     const deletparmanet = document.getElementById('btn8')
-//     const deletparmanets = document.getElementById('btn9')
-//     deletparmanet.parentElement.remove(id)
-//     // deletparmanets.parentElement.remove(id)
-// }
 
-const container = document.querySelector('main')
-container.addEventListener('click', function (event){
-    console.log(event.target.classList.contains('delets'));
-    if(event.target.classList.contains('delets')){
-        const parentdelet = event.target.parentNode.parentNode.parentNode
-        console.log(parentdelet);
-        parentdelet.remove()
-    }
-})
+            // interviwss.innerText = document.getElementById('filter-interview-section').children.length
+            // const rejects= document.getElementById('all-reject-count')
+            // console.log(del.length);
+            // interviwss.innerText = Number(interviwss.innerText) - 1
+            // rejects.innerText = Number(rejects.innerText) - 1
+            // const count = document.getElementById('all-count')
+            // console.log(count.children.length);
+            // count.innerText = document.getElementById('all-cv').children.length
+
+    })
+}
+deletsss()
 
 
 const allcvs = document.getElementById('all-cv');
@@ -28,9 +67,10 @@ function toggle(id) {
     const all = document.getElementById('all-jobs-btn')
     const interview = document.getElementById('all-interview-btn')
     const rejected = document.getElementById('all-reject-btn')
-    const alljobcount = document.getElementById('all-job-count')
-    const allinterviewcount = document.getElementById('all-interview-count')
-    const allrejectcount = document.getElementById('all-reject-count')
+    const alljobcount = document.getElementById('all-job-counts')
+    const allinterviewcount = document.getElementById('all-interview-counts')
+    const allrejectcount = document.getElementById('all-reject-counts')
+    // const alljobcounts = document.getElementById('all-count')
 
     all.classList.add('bg-[#94B4C1]')
     interview.classList.add('bg-[#94B4C1]')
@@ -47,14 +87,20 @@ function toggle(id) {
         rejectedsection.classList.add("hidden");
         alljobcount.classList.add('hidden')
         allrejectcount.classList.add('hidden')
-        allinterviewcount.classList.remove('hidden')        
+        allinterviewcount.classList.remove('hidden')
+        // alljobcounts.classList.remove('hidden')
+
         interviewfun()
 
     }
     else if (id == 'all-jobs-btn') {
         allcvs.classList.remove('hidden')
         interviewSection.classList.add('hidden')
-        rejectedsection.classList.add('hidden')        
+        rejectedsection.classList.add('hidden')
+        alljobcount.classList.remove('hidden')
+        allinterviewcount.classList.add('hidden')
+        allrejectcount.classList.add('hidden')
+        // alljobcount.classList.remove('hidden')        
     }
     else if (id == 'all-reject-btn') {
         allcvs.classList.add('hidden')
@@ -62,7 +108,8 @@ function toggle(id) {
         rejectedsection.classList.remove('hidden')
         alljobcount.classList.add('hidden')
         allinterviewcount.classList.add('hidden')
-        allrejectcount.classList.remove('hidden')  
+        allrejectcount.classList.remove('hidden')
+        // alljobcounts.classList.remove('hidden')
         rejectfun()
 
     }

@@ -26,8 +26,6 @@ function calculaCount() {
     alljobcount.innerText = allcvs.children.length
     allinterviewcount.innerText = interviewlist.length
     allrejectcount.innerText = rejectedlist.length
-
-
 }
 calculaCount()
 // console.log(calculaCount());
@@ -135,7 +133,7 @@ function interviewfun() {
                     </div>
                 </div>
                 <div  class="right-card bg-[#F1FCFC] rounded-full h-[35px] w-[35px] flex items-center justify-center ">
-                    <button class="cursor-pointer fa-lg " id="delet"><i class="fa-solid fa-trash-can delets"></i></button>
+                    <button class="cursor-pointer fa-lg " id="delet"><i class="fa-solid fa-trash-can deletss"></i></button>
                 </div>
             </div>`
 
@@ -145,7 +143,7 @@ function interviewfun() {
 }
 function rejectfun() {
     rejectedsection.innerHTML = ''
-    if (rejectedlist.length === 0) {
+    if (rejectedlist.length === 0 ) {
         rejectedsection.innerHTML = `
          <div class="card bg-[#F5F5F5] rounded-sm sm:p-5 shadow-xl my-5">
                 <div class="p-8">
@@ -175,7 +173,7 @@ function rejectfun() {
                     </div>
                 </div>
                 <div  class="right-card bg-[#F1FCFC] rounded-full h-[35px] w-[35px] flex items-center justify-center ">
-                    <button class="cursor-pointer fa-lg " id="delet"><i class="fa-solid fa-trash-can delets"></i></button>
+                    <button class="cursor-pointer fa-lg " id="delet"><i class="fa-solid fa-trash-can rejectdel"></i></button>
                 </div>
             </div>`
 
