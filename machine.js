@@ -49,13 +49,6 @@ function deletsss() {
             // console.log(remenmingdata);
             interviewlist = remenmingdata
 
-            // const del = document.getElementById('all-job-count')
-            // const interviwss= document.getElementById('all-interview-count')
-            // del.innerText = Number(del.innerText) - 1
-            // let totals = document.getElementById('total');
-            // totals.innerText = del.innerText
-            // parentdelet.remove()
-
             parentdelets.remove()
             calculaCount()
             interviewfun()
@@ -66,12 +59,6 @@ function deletsss() {
             reject.innerText = Number(reject.innerText) - 1
             const rejectss = document.getElementById('rejected');
             rejectss.innerText = reject.innerText
-
-            // const del = document.getElementById('all-job-count')
-            // const interviwss= document.getElementById('all-interview-count')
-            // del.innerText = Number(del.innerText) - 1
-            // let totals = document.getElementById('total');
-            // totals.innerText = del.innerText
             const sohs = document.getElementById('sohan')
             const remenming = rejectedlist.filter(reject => reject.mobile !==sohs.innerText)
             // console.log(sohs.innerText);
@@ -81,17 +68,6 @@ function deletsss() {
             calculaCount()
             rejectfun()
         }
-
-
-
-            // interviwss.innerText = document.getElementById('filter-interview-section').children.length
-            // const rejects= document.getElementById('all-reject-count')
-            // console.log(del.length);
-            // interviwss.innerText = Number(interviwss.innerText) - 1
-            // rejects.innerText = Number(rejects.innerText) - 1
-            // const count = document.getElementById('all-count')
-            // console.log(count.children.length);
-            // count.innerText = document.getElementById('all-cv').children.length
 
     })
 }

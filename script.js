@@ -35,19 +35,6 @@ function calculaCount() {
 }
 calculaCount()
 // console.log(calculaCount());
-// let totalss = document.getElementById('total');
-// totalss.innerText = allcvs.children.length
-// if (totalss === 0) {
-//     totalss.innerHTML = `
-//          <div class="card bg-[#F5F5F5] rounded-sm sm:p-5 shadow-xl my-5">
-//                 <div class="p-8">
-//                     <img class="mx-auto" src="jobs.png" alt="">
-//                     <h2 class="text-center text-2xl font-bold text-[#134E8E]">No jobs available</h2>
-//                     <p class="text-center text-[#BFC6C4]">Cheack back for new job opportuntes</p>
-//                 </div>
-//             </div>`
-
-// }
 
 
 const mainContainer = document.querySelector('main')
@@ -89,7 +76,7 @@ mainContainer.addEventListener('click', function (event) {
 
         const parentNode = event.target.parentNode.parentNode;
         // console.log("rejected btn click");
-        console.log(parentNode);
+        // console.log(parentNode);
         const mobile = parentNode.querySelector('.mobile').innerText
         const devolaper = parentNode.querySelector('.devolaper').innerText
         const jobTimeSalary = parentNode.querySelector('.job-time-salary').innerText
