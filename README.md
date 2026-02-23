@@ -1,83 +1,37 @@
-## Welcome To ( সহজ সরল সিম্পল ) Assignment - 4 
 
-
----
-# 📅 Deadline For 60 marks: 23th February, 2026 (11:59 pm ⏱️)
-# 📅 Deadline For 50 marks: 24th February, 2026 (11:59 pm ⏱️)
-# 📅 Deadline For 30 marks: Any time after 24th February.
-
-
-# Main Requirements
-
-## Design Part
-
-## Dashboard
-- Website name and Create a dashboard like figma 
-- The section should be responsive for mobile devices. It is totally up to you. 
-
-## Available Jobs Section
-- A title on the left side, jobs count on the right side 
-- 3 different tab  below the section title 
-- Minimum 8 cards with:
-	- companyName
-	- position
-	- location
-	- type
-	- salary
-	- description
-	- 2 buttons: Interview, Rejected
-- By default all the jobs data will show on All tab, and the Interview, Rejected tab will show “No jobs Available” message with a subtitle below and an icon/image on the above
-
-- The section should be responsive for mobile devices. It is totally up to you.
-
---- 
-
-## Functionalities Part
-- Clicking on Interview button on the card 
-    - will add the data on Interview tab 
-    - add the status as Interview.
-    - Will increase the the count of interview in Dashboard 
-
-- Clicking on Rejected button on the card 
-    - will add the data on Rejected tab 
-    - add the status as Rejected.
-    - Will increase the the count of Rejected in Dashboard
-
-- Enable toggle between Interview and rejected button(you can select Rejected button after clicking on Interview, and Interview button after clicking on Rejected button). It will change the tab and dashboard count also. It will show tab wise jobs count on the right.
-
----
-
-# Challenges Requirements
-- Clicking on the delete button will remove that card from the UI, and the count will be deducted from the dashboard card and the main section.
-- No lorem ipsum text on your website. At least 8 meaningful commits in your project.  
-
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
 
 
 ## Answers to Questions
 
 ### 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
+1 .Answer => We use this if we want to select an element by  ID after we use its getElementsId. One the other hand if We use this if we want to select an or many element by  className after we use getElementsByClassName . If we want to select a specific element,  in our code we do use quesrySelector If we don't specify the element and there are multiple names, the first one is selected. one the other hand If we select an elements or many elements there are as many names all element selete by querySelectorAll and queryseletor return Elements and quesryseletorall return nodelist
+
 ### 2. How do you create and insert a new element into the DOM?
-
+2. Answer => 1 . let div = document.createElement('div')
+			2 . div.innerText = "sohan is a good boy you know that"
+			3 . after we select a element with a id or class after we appendchild or parentchild, (like you see under)
+			4 .  const selet = document.getElementById('id')
+			5 .selet.appendchild.div
 ### 3. What is Event Bubbling? And how does it work?
-
+3. Answer => 1.Event Bubling from bottom to top 
+			2 . like we have a div in this div we have button if we click in this button show all html path it is event Bubbling if we want to see a parent of the button we use parentNobe its called event Bubbling 
+			3 .it work like  button -> div -> body -> html ->document
 ### 4. What is Event Delegation in JavaScript? Why is it useful?
+4. Answer => 1.Event Delegation like a methord . In this methord we can't use 
+             many event listerner in child elements we use event listerner only parent
+			element.
+			it is helpfull cause we neesd little event listerner , good performance , 
+			Takes very little memory. code cleane etc
+
 
 ### 5. What is the difference between preventDefault() and stopPropagation() methods?
-
+5. Answer => Their difference is preventDefault() close brower default behavior 
+			and stopPropagation() stop event bubbling 
 ---
 
 
-**Technology Stack:**
-- HTML
-- CSS (Vanilla/Tailwind/DaisyUI)
-- JavaScript (Vanilla)
 
-
---- 
-
-## What to submit: 
 
 1. GitHub Repository Link: 
 2. Live Site Link: 
