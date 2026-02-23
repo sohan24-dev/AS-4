@@ -1,24 +1,24 @@
-function re(){
-     const contai = document.querySelector('#filter-interview-section')
-    contai.addEventListener('click', function (event){
-     if (event.target.classList.contains('deletss')){
-            const parentdelets = event.target.parentNode.parentNode.parentNode
-            const indel = document.getElementById('all-interview-count')
-            indel.innerText = Number(indel.innerText) - 1
-            const interviews = document.getElementById('interview');
-            interviews.innerText = indel.innerText
+// function re(){
+//      const contai = document.querySelector('#filter-interview-section')
+//     contai.addEventListener('click', function (event){
+//      if (event.target.classList.contains('deletss')){
+//             const parentdelets = event.target.parentNode.parentNode.parentNode
+//             const indel = document.getElementById('all-interview-count')
+//             indel.innerText = Number(indel.innerText) - 1
+//             const interviews = document.getElementById('interview');
+//             interviews.innerText = indel.innerText
 
-            const del = document.getElementById('all-job-count')
-            // const interviwss= document.getElementById('all-interview-count')
-            del.innerText = Number(del.innerText) - 1
-            let totals = document.getElementById('total');
-            totals.innerText = del.innerText
-            // parentdelet.remove()
+//             const del = document.getElementById('all-job-count')
+//             // const interviwss= document.getElementById('all-interview-count')
+//             del.innerText = Number(del.innerText) - 1
+//             let totals = document.getElementById('total');
+//             totals.innerText = del.innerText
+//             // parentdelet.remove()
 
-            parentdelets.remove()
-        }
-})}
-re()
+//             parentdelets.remove()
+//         }
+// })}
+// re()
 
 
 function deletsss() {
@@ -35,23 +35,31 @@ function deletsss() {
             let totals = document.getElementById('total');
             totals.innerText = del.innerText
             parentdelet.remove()
+            calculaCount()
         }
-        // else if (event.target.classList.contains('deletss')){
-        //     const parentdelets = event.target.parentNode.parentNode.parentNode
-        //     const indel = document.getElementById('all-interview-count')
-        //     indel.innerText = Number(indel.innerText) - 1
-        //     const interviews = document.getElementById('interview');
-        //     interviews.innerText = indel.innerText
+        else if (event.target.classList.contains('deletss')){
+            const parentdelets = event.target.parentNode.parentNode.parentNode
+            const indel = document.getElementById('all-interview-count')
+            indel.innerText = Number(indel.innerText) - 1
+            const interviews = document.getElementById('interview');
+            interviews.innerText = indel.innerText
+            const soh = document.getElementById('sohan1')
+            // console.log(soh.innerText);
+            const remenmingdata = interviewlist.filter(interview => interview.mobile !==soh.innerText)
+            // console.log(remenmingdata);
+            interviewlist = remenmingdata
 
-        //     const del = document.getElementById('all-job-count')
-        //     // const interviwss= document.getElementById('all-interview-count')
-        //     del.innerText = Number(del.innerText) - 1
-        //     let totals = document.getElementById('total');
-        //     totals.innerText = del.innerText
-        //     // parentdelet.remove()
+            // const del = document.getElementById('all-job-count')
+            // const interviwss= document.getElementById('all-interview-count')
+            // del.innerText = Number(del.innerText) - 1
+            // let totals = document.getElementById('total');
+            // totals.innerText = del.innerText
+            // parentdelet.remove()
 
-        //     parentdelets.remove()
-        // }
+            parentdelets.remove()
+            calculaCount()
+            interviewfun()
+        }
         else if (event.target.classList.contains('rejectdel')){
             const rejectdelets = event.target.parentNode.parentNode.parentNode
             const reject = document.getElementById('all-reject-count')
@@ -59,13 +67,19 @@ function deletsss() {
             const rejectss = document.getElementById('rejected');
             rejectss.innerText = reject.innerText
 
-            const del = document.getElementById('all-job-count')
+            // const del = document.getElementById('all-job-count')
             // const interviwss= document.getElementById('all-interview-count')
-            del.innerText = Number(del.innerText) - 1
-            let totals = document.getElementById('total');
-            totals.innerText = del.innerText
+            // del.innerText = Number(del.innerText) - 1
+            // let totals = document.getElementById('total');
+            // totals.innerText = del.innerText
+            const sohs = document.getElementById('sohan')
+            const remenming = rejectedlist.filter(reject => reject.mobile !==sohs.innerText)
+            // console.log(sohs.innerText);
+            rejectedlist = remenming
 
             rejectdelets.remove()
+            calculaCount()
+            rejectfun()
         }
 
 

@@ -9,6 +9,10 @@ let total = document.getElementById('total');
 let alljobcount = document.getElementById('all-job-count')
 let allinterviewcount = document.getElementById('all-interview-count')
 let allrejectcount = document.getElementById('all-reject-count')
+let allrejectmuch = document.getElementById('all-rejccts-of-jobs')
+let allinterview = document.getElementById('all-interview-of-jobs')
+
+
 
 
 const interviewSection = document.querySelector('.filter-interview-section')
@@ -26,9 +30,25 @@ function calculaCount() {
     alljobcount.innerText = allcvs.children.length
     allinterviewcount.innerText = interviewlist.length
     allrejectcount.innerText = rejectedlist.length
+    allrejectmuch.innerText = allcvs.children.length
+    allinterview.innerText = allcvs.children.length
 }
 calculaCount()
 // console.log(calculaCount());
+// let totalss = document.getElementById('total');
+// totalss.innerText = allcvs.children.length
+// if (totalss === 0) {
+//     totalss.innerHTML = `
+//          <div class="card bg-[#F5F5F5] rounded-sm sm:p-5 shadow-xl my-5">
+//                 <div class="p-8">
+//                     <img class="mx-auto" src="jobs.png" alt="">
+//                     <h2 class="text-center text-2xl font-bold text-[#134E8E]">No jobs available</h2>
+//                     <p class="text-center text-[#BFC6C4]">Cheack back for new job opportuntes</p>
+//                 </div>
+//             </div>`
+
+// }
+
 
 const mainContainer = document.querySelector('main')
 mainContainer.addEventListener('click', function (event) {
@@ -121,7 +141,7 @@ function interviewfun() {
         div.className = 'space-y-7'
         div.innerHTML = ` <div id="card3" class="my-6 bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl">
                 <div class="letf-card space-y-2">
-                    <h2 class="text-2xl mobile">${interviewcard.mobile}</h2>
+                    <h2 id="sohan1" class="text-2xl mobile">${interviewcard.mobile}</h2>
                     <p class="devolaper">${interviewcard.devolaper}</p>
                     <p class="job-time-salary" >${interviewcard.jobTimeSalary}</p>
                     <p id="not-applied" class="bg-[#A7E6FF] inline-block p-2 description">${interviewcard.appliedCv}</p>
@@ -143,7 +163,7 @@ function interviewfun() {
 }
 function rejectfun() {
     rejectedsection.innerHTML = ''
-    if (rejectedlist.length === 0 ) {
+    if (rejectedlist.length === 0) {
         rejectedsection.innerHTML = `
          <div class="card bg-[#F5F5F5] rounded-sm sm:p-5 shadow-xl my-5">
                 <div class="p-8">
@@ -161,7 +181,7 @@ function rejectfun() {
         div.className = 'space-y-7'
         div.innerHTML = ` <div id="card3" class="my-6 bg-[#F5F5F5] p-2 flex justify-between rounded-sm sm:p-5 shadow-xl">
                 <div class="letf-card space-y-2">
-                    <h2 class="text-2xl mobile">${reject.mobile}</h2>
+                    <h2 id="sohan" class="text-2xl mobile">${reject.mobile}</h2>
                     <p class="devolaper">${reject.devolaper}</p>
                     <p class="job-time-salary" >${reject.jobTimeSalary}</p>
                     <p id="not-applied" class="bg-[#A7E6FF] inline-block p-2 description">${reject.appliedCv}</p>
